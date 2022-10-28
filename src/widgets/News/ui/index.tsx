@@ -25,7 +25,7 @@ const NewsWidget: React.FC<NewsWidgetProps> = props => {
             return (
               <>
                 <h1>{programItem.header}</h1>
-                {programItem.video_arr.length && (
+                {programItem.video_arr && (
                   <div className={styles.videoBox}>
                     {programItem.video_arr.map(programVideoItem => (
                       <video

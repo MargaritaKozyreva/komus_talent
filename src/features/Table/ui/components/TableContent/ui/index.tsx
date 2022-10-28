@@ -3,9 +3,9 @@ import Arrow from "@shared/ui/icons/Arrow";
 import React, { DetailedHTMLProps, HTMLAttributes } from "react";
 import cn from "classnames";
 import styles from "./styles.module.scss";
-import { useSelector } from 'react-redux';
-import { userModel } from '@src/entities/User';
-import { UserType } from '@src/shared/api/types';
+import { useSelector } from "react-redux";
+import { userModel } from "@src/entities/User";
+import { UserType } from "@src/shared/api/types";
 
 interface TableProps
   extends DetailedHTMLProps<
@@ -15,7 +15,7 @@ interface TableProps
   className?: string;
   data?: RateListItemDTO[];
   raitingId?: number;
-  user: UserType
+  user: UserType;
 }
 
 const useSortableData = (items, config = null) => {
@@ -79,7 +79,7 @@ const TableContent: React.FC<TableProps> = props => {
       <thead className={styles.table__thead}>
         <tr>
           <th>
-            <span onClick={() => requestSort("placeInRaiting")}>
+            <span onClick={() => requestSort("placeInRaiting")} style={{ fontSize: '16px'}}>
               Место в рейтинге
               <img
                 src={`${process.env["PUBLIC"]}/images/icons/arrows.png`}
@@ -93,7 +93,7 @@ const TableContent: React.FC<TableProps> = props => {
           </th>
           <th className={styles.table__thead__th__flex}>
             <div>
-              <span onClick={() => requestSort("groupName")}>
+              <span onClick={() => requestSort("groupName")} style={{ fontSize: '16px'}}>
                 Название группы
                 {raitingId !== 2 && (
                   <img
@@ -109,7 +109,7 @@ const TableContent: React.FC<TableProps> = props => {
             </div>
             {raitingId !== 2 && (
               <div>
-                <span onClick={() => requestSort("curator", "fullname")}>
+                <span onClick={() => requestSort("curator", "fullname")} style={{ fontSize: '16px'}}>
                   Куратор
                   <img
                     src={`${process.env["PUBLIC"]}/images/icons/arrows.png`}
@@ -124,8 +124,8 @@ const TableContent: React.FC<TableProps> = props => {
             )}
           </th>
           <th>
-            <span onClick={() => requestSort("talentsCount")}>
-              Talents
+            <span onClick={() => requestSort("talentsCount")} style={{ fontSize: '16px'}}>
+              Баллы
               <img
                 src={`${process.env["PUBLIC"]}/images/icons/arrows.png`}
                 onClick={() => requestSort("talentsCount")}
@@ -139,7 +139,7 @@ const TableContent: React.FC<TableProps> = props => {
         </tr>
       </thead>
       <tbody className={styles.table__tbody}>
-        {data && 
+        {data &&
           items.map((item, i) => (
             <tr
               key={i}
@@ -156,7 +156,9 @@ const TableContent: React.FC<TableProps> = props => {
                 <p>{item.groupName}</p>
                 <p>{item.curator.fullname}</p>
               </td>
-              <td>{item.talentsCount}</td>
+              <td>
+                <p>{item.talentsCount}</p>
+              </td>
             </tr>
           ))}
       </tbody>

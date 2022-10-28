@@ -42,7 +42,7 @@ const UserGroupWidget: React.FC<UsersProps> = props => {
         isEmpty={tutorData === null}
         isLoading={tutorIsLoading === true}
       >
-        <h1>Мой тьютор</h1>
+        <h1>Мой куратор</h1>
         {tutorData && (
           <div className={styles.root__person_card_wrapper}>
             <PersonCard
