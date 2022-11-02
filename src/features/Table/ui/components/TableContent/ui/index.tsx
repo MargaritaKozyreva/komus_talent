@@ -79,7 +79,10 @@ const TableContent: React.FC<TableProps> = props => {
       <thead className={styles.table__thead}>
         <tr>
           <th>
-            <span onClick={() => requestSort("placeInRaiting")} style={{ fontSize: '16px'}}>
+            <span
+              onClick={() => requestSort("placeInRaiting")}
+              style={{ fontSize: "16px" }}
+            >
               Место в рейтинге
               <img
                 src={`${process.env["PUBLIC"]}/images/icons/arrows.png`}
@@ -93,7 +96,10 @@ const TableContent: React.FC<TableProps> = props => {
           </th>
           <th className={styles.table__thead__th__flex}>
             <div>
-              <span onClick={() => requestSort("groupName")} style={{ fontSize: '16px'}}>
+              <span
+                onClick={() => requestSort("groupName")}
+                style={{ fontSize: "16px" }}
+              >
                 Название группы
                 {raitingId !== 2 && (
                   <img
@@ -109,7 +115,10 @@ const TableContent: React.FC<TableProps> = props => {
             </div>
             {raitingId !== 2 && (
               <div>
-                <span onClick={() => requestSort("curator", "fullname")} style={{ fontSize: '16px'}}>
+                <span
+                  onClick={() => requestSort("curator", "fullname")}
+                  style={{ fontSize: "16px" }}
+                >
                   Куратор
                   <img
                     src={`${process.env["PUBLIC"]}/images/icons/arrows.png`}
@@ -124,8 +133,11 @@ const TableContent: React.FC<TableProps> = props => {
             )}
           </th>
           <th>
-            <span onClick={() => requestSort("talentsCount")} style={{ fontSize: '16px'}}>
-              Баллы
+            <span
+              onClick={() => requestSort("talentsCount")}
+              style={{ fontSize: "16px" }}
+            >
+              Talents
               <img
                 src={`${process.env["PUBLIC"]}/images/icons/arrows.png`}
                 onClick={() => requestSort("talentsCount")}

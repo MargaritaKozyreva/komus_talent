@@ -49,7 +49,7 @@ const Rates: React.FC<any> = props => {
         <div className={styles.root__talent_widget}>
           <div className={styles.root__talent_wrapper}>
             <span className={styles.root__talent_wrapper_title}>
-              Мои баллы
+              Мои talents
             </span>
             <span className={styles.root__talent_wrapper_place}>
               {userRateResponse?.entity?.placeInRate}
