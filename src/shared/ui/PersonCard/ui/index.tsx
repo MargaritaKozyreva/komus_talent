@@ -25,14 +25,12 @@ const PersonCard: React.FC<PersonCardProps> = props => {
     <div className={cn(styles.root, className)}>
       <div className={cn(styles.root__wrapper, className)}>
         {showAvatar && (
-          <div className={styles.userPic}>
-            <img
-              src={`${process.env["PORTAL"]}${userPicLink}`}
-              alt="userPhoto"
-              // onError={({ currentTarget }) => {
-              //   currentTarget.onerror = null;
-              //   currentTarget.src = `${process.env["PUBLIC"]}/images/user-default.png`;
-              // }}
+          <div className={styles.userPicWrapper}>
+            <div
+              className={styles.userPic}
+              style={{
+                backgroundImage: `url(${process.env["PORTAL"]}${userPicLink})`,
+              }}
             />
           </div>
         )}

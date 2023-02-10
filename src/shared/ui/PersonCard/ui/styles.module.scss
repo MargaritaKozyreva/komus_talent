@@ -1,60 +1,70 @@
 .root {
-    width: 100%;
-    left: 30px;
-    top: 815px;
-    padding: 35px;
-    background-color: var(--white);
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 90%;
+  padding: 25px;
+  background-color: var(--white);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: inherit;
 
-    &__wrapper{
-        display: grid;
-        grid-template-columns: 1fr auto;
-        align-items: center;
-        gap: 30px;
-    }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.userPicWrapper {
+  width: 162px;
+  height: 162px;
+  background: #f2f2f2;
+  border-radius: 50%;
+  position: relative;
 }
 
 .userPic {
-    width: auto;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  width: 162px;
+  height: 162px;
+  border-radius: 50%;
+  left: 10px;
+  top: 5px;
+
+  & img {
+    position: absolute;
+    left: 10px;
+    top: 5px;
     width: 162px;
     height: 162px;
-    background: #F2F2F2;
     border-radius: 50%;
-    position: relative;
-
-    & img {
-        position: absolute;
-        left: 10px;
-        top: 5px;
-        width: 162px;
-        height: 162px;
-        border-radius: 50%;
-    }
+  }
 }
 
 .userData {
-    display: inline-block;
+  display: inline-block;
 
-    &__fullname {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 23px;
-        color: var(--gray-900);
-        margin-bottom: 9px;
-        padding: 0
-    }
+  &__fullname {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--gray-900);
+    margin-bottom: 9px;
+    padding: 0;
+  }
 
-    &__position {
-        font-family: 'Fira Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 17px;
-        color: var(--gray-800);
-    }
+  &__position {
+    font-family: "Fira Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    color: var(--gray-800);
+  }
 }

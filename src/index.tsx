@@ -16,6 +16,7 @@ import { PrivatePage } from "@pages/private";
 
 import store from "@shared/api/store";
 import "./app/index.scss";
+import Lib from './pages/lib/Lib';
 
 const App = () => {
   return (
@@ -76,6 +77,14 @@ const App = () => {
             element={
               <PrivatePage>
                 <CuratorsWidget />
+              </PrivatePage>
+            }
+          />
+          <Route
+            path="/komus_talents/lib"
+            element={
+              <PrivatePage>
+                <Lib />
               </PrivatePage>
             }
           />

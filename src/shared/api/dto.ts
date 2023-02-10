@@ -6,6 +6,11 @@ import {
   UserType,
 } from "./types";
 
+export interface ResponseDTO {
+  success: boolean;
+  error_text: string;
+}
+
 export interface GroupDTO {
   tutor: UserType;
   groupUsers: UserType[];
@@ -15,7 +20,23 @@ export interface RateListItemDTO {
   groupName: string;
   groupId: string;
   curator: UserType;
-  talentsCount: UserTalentType['talents'];
+  talentsCount: UserTalentType["talents"];
+}
+
+export interface LibListItemDTO {
+  title: string;
+  description: string;
+  id: string;
+  link: string;
+}
+
+export interface VideoListItemDTO {
+  title: string;
+  description: string;
+  id: string;
+  poster: string;
+  source: string;
+  alt: string;
 }
 export interface CuratorItemDTO {
   tutors: UserType[];

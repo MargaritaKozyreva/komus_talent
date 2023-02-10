@@ -1,0 +1,49 @@
+.videoList {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(420px, 3fr));
+
+  align-items: stretch;
+  gap: 35px;
+
+  video {
+    width: 440px;
+    height: 230px;
+    background: #000000;
+    border: 1px solid #f8f8f8;
+    border-radius: 20px;
+  }
+
+  .videoBox {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .videoContent {
+    margin-bottom: 20px;
+  }
+
+  .videoText {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  .videoTitle {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: #18191f;
+  }
+
+  .videoDescription {
+    font-family: "Fira Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #474a57;
+  }
+}

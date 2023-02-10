@@ -2,12 +2,8 @@
 // Please do not change this file!
 interface CssExports {
   'root': string;
-  'root__wrapper': string;
-  'userData': string;
-  'userData__fullname': string;
-  'userData__position': string;
-  'userPic': string;
-  'userPicWrapper': string;
+  'root__btn': string;
+  'root__btn_active': string;
 }
 export const cssExports: CssExports;
 export default cssExports;

@@ -91,7 +91,7 @@ const Rates: React.FC<any> = props => {
 
   return (
     <div>
-      <div className={cn(styles.root, classNames)}>
+      <div className={cn(styles.root, classNames as any)}>
         <div className={styles.root__search}>
           <Search
             searchQuery={searchQuery}

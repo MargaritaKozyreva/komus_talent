@@ -44,12 +44,12 @@ const Rates: React.FC<any> = props => {
 
   return (
     <WithSkeleton isLoading={isLoading} isEmpty={data === null}>
-      <div className={cn(styles.root, classNames)}>
+      <div className={cn(styles.root, classNames as any)}>
         <TableRate />
         <div className={styles.root__talent_widget}>
           <div className={styles.root__talent_wrapper}>
             <span className={styles.root__talent_wrapper_title}>
-              Мои talents
+              Мои таланты
             </span>
             <span className={styles.root__talent_wrapper_place}>
               {userRateResponse?.entity?.placeInRate}

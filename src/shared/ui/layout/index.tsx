@@ -36,7 +36,7 @@ const Layout: React.FC<LayoutProps> = props => {
         {location.pathname === "/komus_talents" && <NewsSection />}
         {children}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

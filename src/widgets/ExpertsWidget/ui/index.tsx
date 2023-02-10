@@ -6,6 +6,7 @@ import { useData } from "@shared/helpers/hooks/useData";
 import { WithSkeleton } from "@shared/ui/WithSkeleton";
 import { curatorModel } from "@entities/Curators";
 import cn from "classnames";
+import { expertModel } from '@entities/Experts';
 
 interface ExpertsProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -16,7 +17,7 @@ const ExpertsWidget: React.FC<ExpertsProps> = props => {
   const { className } = props;
 
   const { data, isLoading, isError } = useData<UserType[]>(() =>
-    curatorModel.requests.getCuratorListByCode("talant_experts_junior")
+    expertModel.requests.getExpertListByGroupId('')
   );
 
   return (

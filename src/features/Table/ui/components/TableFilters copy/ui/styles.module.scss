@@ -1,0 +1,39 @@
+.root {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    & button{
+        cursor: pointer;
+    }
+
+
+    &__btn_active {
+        background: linear-gradient(267.26deg, #AE0000 4.03%, #EB0000 97.87%);
+        color: var(--white);
+        border: 1px solid #F2F2F2;
+        padding: 20px;
+        border-radius: 15px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+    }
+    &__btn {
+        background: #FFFFFF;
+        border: 1px solid #F2F2F2;
+        padding: 20px;
+        border-radius: 15px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: #000000;
+
+        &:hover {
+            background: linear-gradient(267.26deg, #AE0000 4.03%, #EB0000 97.87%);
+            color: var(--white);
+            border-color: none;
+        }
+    }
+}

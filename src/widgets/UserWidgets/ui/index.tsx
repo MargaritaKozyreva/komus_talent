@@ -98,7 +98,7 @@ const UserWidgets: React.FC<userWidgetsProps> = props => {
                 {userTalentResponse?.entity?.talents}
               </span>
               <br />
-              <span>Мои talents</span>
+              <span>Мои таланты</span>
             </div>
           </div>
         </UserGroupCard>

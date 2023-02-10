@@ -9,9 +9,11 @@ import { CuratorData } from './curators';
 import { ExpertData } from './experts';
 import { ProgramData } from './program';
 import { ModalData } from './modal';
+import { LibData } from './lib';
 
 export const GroupContext = new GroupData();
 export const RateContext = new RateData();
+export const LibContext = new LibData();
 export const TalentContext = new TalentData();
 export const ArticlesContext = new ArticleData();
 export const UserContext = new UserData();

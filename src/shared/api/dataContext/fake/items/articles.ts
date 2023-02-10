@@ -59,10 +59,10 @@ export const articleData: ArticleType[] = [
   },
   {
     articleId: "7",
-    articleKey: "calendar",
+    articleKey: "lib",
     createDate: "09.05.2021",
-    title: "",
-    shortText: "",
+    title: "Библиотека книг и вебинаров",
+    shortText: "Тут вы можете найти необходимые книги и записи вебинаров",
     fullText: "",
   },
 ];

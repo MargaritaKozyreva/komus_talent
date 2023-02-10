@@ -7,7 +7,7 @@ export class ExpertData {
   }): ResponseResult<UserType[]> {
     const data = httpService<UserType[]>(
       "GET",
-      "getExpertListByGroupId",
+      "get_experts",
       `code=${payload.groupId}`
     );
     return data;

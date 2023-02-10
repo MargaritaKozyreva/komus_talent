@@ -11,11 +11,14 @@ import { useDispatch } from "react-redux";
 import { modalActions } from "@features/Modal/redux/ModalSlices";
 import { ModalKey } from "@features/Modal/components/ModalController";
 import { ProgramContext } from "@shared/api/dataContext";
+import { useNavigate } from "react-router-dom";
 
 const Articles = () => {
   const { data, isLoading, isError } = useData<ArticleType[]>(() =>
     articleModel.actions.getArticles()
   );
+
+  const navigate = useNavigate();
 
   const setCustomStyle = idx => {
     switch (idx) {
@@ -114,9 +117,9 @@ const Articles = () => {
   const dispatch = useDispatch();
 
   const onClickHandler = (groupId: string, articleKey: string) => {
-    console.log(articleKey)
-    if (articleKey === "calendar") {
-      window.location.href = "/view_doc.html?mode=calendar";
+    console.log(articleKey);
+    if (articleKey === "lib") {
+      navigate("/komus_talents/lib");
     } else {
       dispatch(
         modalActions.showModal({
