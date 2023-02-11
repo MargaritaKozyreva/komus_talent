@@ -1,4 +1,11 @@
 .root {
+
+    input[type=button]:hover, input[type=submit]:hover, button:hover, a.button:hover {
+        border-color: inherit;
+        background-color: inherit;
+        color: #FFFFFF;
+    }
+
     margin: 0 auto;
     background: #FFFFFF;
     border-radius: 20px;

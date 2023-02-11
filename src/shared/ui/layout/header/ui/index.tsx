@@ -58,12 +58,13 @@ const Header: React.FC<HeaderProps> = props => {
               {userState.entity && (
                 <a href="" className={styles.mainMenu__userLink}>
                   <div className={styles.mainMenu__userQuest}>
-                   Личный кабинет
+                    Личный кабинет
                   </div>
-                  <img
-                  className={styles.user_photo}
-                    src={`${process.env["PORTAL"]}${userState.entity.photo}`}
-                    alt=""
+                  <div
+                    className={styles.user_photo}
+                    style={{
+                      backgroundImage: `url(${process.env["PORTAL"]}${userState.entity.photo})`,
+                    }}
                   />
                   <div className={styles.mainMenu__userName}>
                     {userState.entity.fullname}

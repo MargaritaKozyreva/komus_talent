@@ -26,13 +26,13 @@ a{
     text-decoration: none;  
     color: var(--default-text);
     &:hover {
-        text-decoration: underline;
+        text-decoration: none;
     }
     &:focus {
-        text-decoration: underline;
+        text-decoration: none;
     }
     &:active {
-        text-decoration: underline;
+        text-decoration: none;
     }
 }
 

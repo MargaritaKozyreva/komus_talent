@@ -135,15 +135,23 @@ const LibWidget: React.FC<any> = props => {
           )}
           {filterItemId === 2 && (
             <>
-              {/* <div className={styles.root__title}>
-                <h3>Список вебинаров</h3>
-              </div>
-              <VideoList videos={filterData as VideoListItemDTO[]} /> */}
-              <div className={styles.root__default_img}>
-                <img
-                  src={process.env["PUBLIC"] + "/images/content/vebinar_default_pic.jpg"}
-                />
-              </div>
+              {filterData.length ? (
+                <>
+                  <div className={styles.root__title}>
+                    <h3>Список вебинаров</h3>
+                  </div>
+                  <VideoList videos={filterData as VideoListItemDTO[]} />
+                </>
+              ) : (
+                <div className={styles.root__default_img}>
+                  <img
+                    src={
+                      process.env["PUBLIC"] +
+                      "/images/content/vebinar_default_pic.jpg"
+                    }
+                  />
+                </div>
+              )}
             </>
           )}
         </WithSkeleton>

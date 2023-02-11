@@ -13,10 +13,21 @@
     justify-content: space-between;
 
     .user_photo {
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
         width: 40px;
         height: 40px;
         border-radius: 50%;
-    }
+      
+        & img {
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+      }
 }
 
 .mainMenu_ellipse1 {
