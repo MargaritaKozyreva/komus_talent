@@ -56,6 +56,7 @@ const Roadmap: React.FC<RoadmapProps> = props => {
                   })}
                   style={{
                     background: setBgImage(),
+                    backgroundSize: "contain",
                     backgroundRepeat: "no-repeat",
                     backgroundPositionX: "right",
                   }}
