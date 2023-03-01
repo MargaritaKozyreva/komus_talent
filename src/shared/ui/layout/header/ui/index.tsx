@@ -56,7 +56,7 @@ const Header: React.FC<HeaderProps> = props => {
               isEmpty={userState.entity === null}
             >
               {userState.entity && (
-                <a href="" className={styles.mainMenu__userLink}>
+                <a href="/_wt/cabinet" className={styles.mainMenu__userLink}>
                   <div className={styles.mainMenu__userQuest}>
                     Личный кабинет
                   </div>

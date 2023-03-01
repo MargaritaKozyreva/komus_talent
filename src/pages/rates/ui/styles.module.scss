@@ -1,70 +1,63 @@
 .root {
-    display: grid;
-    grid-template-columns: auto 330px;
-    gap: 33px;
+  display: grid;
+  grid-template-columns: auto 330px;
+  gap: 33px;
 
-    &__talent_widget {
-        width: auto;
+  &__talent_widget {
+    width: auto;
 
-        & button {
-            background: linear-gradient(180deg, #AE0000 0%, #EB0000 100%);
-            border: 1px solid #F2F2F2;
-            border-radius: 15px;
-            color: var(--white);
-            font-style: normal;
-            font-weight: 700;
-            font-size: 20px;
-            line-height: 24px;
-            padding: 20px;
-            width: 100%;
-            cursor: pointer;
-            transition-delay: 2s;
-            transition-duration: 4s;
+    & button {
+      background: linear-gradient(180deg, #ae0000 0%, #eb0000 100%);
+      border: 1px solid #f2f2f2;
+      border-radius: 15px;
+      color: var(--white);
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      padding: 20px;
+      width: 100%;
+      cursor: pointer;
 
+      &:hover {
+        background: linear-gradient(180deg, #660000 0%, #c00101 100%);
+      }
+    }
+  }
 
-            &:hover{
-                transition-delay: 2s;
-                transition-duration: 4s;
-                background: linear-gradient(180deg, #660000 0%, #c00101 100%);
-                font-size: 36px;
-            }
-        }
+  &__talent_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 275px;
+    background: #ffffff;
+    border: 1px solid #f2f2f2;
+    border-radius: 15px;
+    overflow: hidden;
+
+    &_title {
+      position: absolute;
+      top: 30px;
+      right: 35%;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--default-text);
     }
 
-    &__talent_wrapper {
-        position: relative;
-        margin-bottom: 15px;
-        width: 100%;
-        height: 275px;
-        background: #FFFFFF;
-        border: 1px solid #F2F2F2;
-        border-radius: 15px;
-        overflow: hidden;
-
-        &_title {
-            position: absolute;
-            top: 30px;
-            right: 35%;
-            font-size: 20px;
-            font-weight: 400;
-            color: var(--default-text);
-        }
-
-        &_place {
-            position: absolute;
-            font-weight: 700;
-            font-size: 100px;
-            top: 110px;
-            right: 33%;
-            z-index: 1;
-            color: var(--white);
-        }
-
-        & img {
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-        }
-
+    &_place {
+      font-weight: 700;
+      font-size: 100px;
+      z-index: 1;
+      color: var(--white);
     }
+
+    & img {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+  }
 }

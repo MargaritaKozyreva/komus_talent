@@ -79,7 +79,7 @@ const UserWidgets: React.FC<userWidgetsProps> = props => {
       >
         <UserGroupCard
           className={styles.groupCard}
-          onClick={() => onClickGroupHandler("1")}
+         
         >
           <div className={styles.groupCardbox}>
             <div className={styles.groupCardbox__text}>
@@ -87,7 +87,7 @@ const UserWidgets: React.FC<userWidgetsProps> = props => {
               <span>{userGroupResponse.entity?.shortText}</span>
             </div>
 
-            <Button mode="red" withCircle>
+            <Button mode="red"  onClick={() => onClickGroupHandler("1")} withCircle>
               Посмотреть
             </Button>
           </div>

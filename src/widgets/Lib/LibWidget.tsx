@@ -116,12 +116,23 @@ const LibWidget: React.FC<any> = props => {
         >
           {filterItemId === 1 && (
             <>
-              <a
-                href={`${process.env["PORTAL"]}/download_file.html?file_id=7186911731782072007`}
-                style={{ color: "#1757ae", fontSize: "14px" }}
-              >
-                Инструкция по работе с личным кабинетом mybook
-              </a>
+              <p>
+                <a
+                  href={`${process.env["PORTAL"]}/download_file.html?file_id=7186911731782072007`}
+                  style={{ color: "#1757ae", fontSize: "14px" }}
+                >
+                  Инструкция по работе с личным кабинетом mybook
+                </a>
+              </p>
+              <p>
+                <a
+                  href={`${process.env["PORTAL"]}/download_file.html?file_id=7199945199466723803`}
+                  style={{ color: "#1757ae", fontSize: "14px" }}
+                >
+                 Инструкция по работе с личным кабинетом ЛитРес
+                </a>
+              </p>
+
               <div className={styles.root__title}>
                 <h3>Список книг</h3>
               </div>

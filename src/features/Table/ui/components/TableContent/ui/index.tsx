@@ -23,6 +23,13 @@ const useSortableData = (items, config = null) => {
 
   const sortedItems = React.useMemo(() => {
     let sortableItems = (items && [...items]) || [];
+    sortableItems = sortableItems.map(items => {
+      return {
+        ...items,
+        talentsCount: +items.talentsCount,
+      };
+    });
+
     if (sortConfig !== null) {
       sortableItems.sort((a, b) => {
         let first = a[sortConfig.key];
@@ -137,7 +144,7 @@ const TableContent: React.FC<TableProps> = props => {
               onClick={() => requestSort("talentsCount")}
               style={{ fontSize: "16px" }}
             >
-              Talents
+              Таланты
               <img
                 src={`${process.env["PUBLIC"]}/images/icons/arrows.png`}
                 onClick={() => requestSort("talentsCount")}
@@ -161,7 +168,7 @@ const TableContent: React.FC<TableProps> = props => {
             >
               <td className={styles.table__place_td}>
                 <span className={styles.table__place_td__place_num}>
-                  {item.placeInRaiting}
+                  {Number(item.placeInRaiting)}
                 </span>
               </td>
               <td>
@@ -169,7 +176,7 @@ const TableContent: React.FC<TableProps> = props => {
                 <p>{item.curator.fullname}</p>
               </td>
               <td>
-                <p>{item.talentsCount}</p>
+                <p>{+item.talentsCount}</p>
               </td>
             </tr>
           ))}

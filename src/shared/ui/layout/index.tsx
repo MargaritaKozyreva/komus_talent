@@ -33,7 +33,7 @@ const Layout: React.FC<LayoutProps> = props => {
     <div>
       <Header />
       <div className={cn(styles.root, className)}>
-        {location.pathname === "/komus_talents" && <NewsSection />}
+        {/* {location.pathname === "/komus_talents" && <NewsSection />} */}
         {children}
       </div>
       {/* <Footer /> */}
