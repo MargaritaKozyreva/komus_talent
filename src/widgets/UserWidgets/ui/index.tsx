@@ -95,7 +95,7 @@ const UserWidgets: React.FC<userWidgetsProps> = props => {
             <EllipseSvg />
             <div className={styles.placeInTalentSelection__wrapper}>
               <span style={{ fontWeight: "700", fontSize: "72px" }}>
-                {userTalentResponse?.entity?.talents}
+                {userRateResponse?.entity.userScore }
               </span>
               <br />
               <span>Мои таланты</span>

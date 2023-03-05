@@ -23,6 +23,7 @@ export type GroupType = {
 export type RateType = {
   placeInRate: number;
   placeInGroup: number;
+  userScore: number;
 };
 
 export type UserTalentType = {

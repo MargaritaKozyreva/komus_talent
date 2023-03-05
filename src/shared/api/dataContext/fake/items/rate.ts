@@ -4,6 +4,7 @@ import { RateType } from "@api/types";
 export const userRateInfo: RateType = {
   placeInRate: 21,
   placeInGroup: 7,
+  userScore: 11
 };
 
 export const generalRateListByRaitingId: RateListItemDTO[] = [
